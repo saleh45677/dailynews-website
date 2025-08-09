@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Daily News</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header>
+        <h1 style="border:2px solid white; ">Daily News</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html"target="_blank">About Us</a>
+            <a href="contact.html" target="_blank">Contact Us</a>
+            <a href="privacy.html" target="_blank">Privacy Policy</a>
+        </nav>
+    </header>
+
+    <style>
+        /* Simple button styling */
+        .btn {
+            display: inline-block;
+            margin: 10px;
+            padding: 12px 25px;
+            font-size: 18px;
+            color: white;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+            color: burlywood;
+        }
+    </style>
+
+<div class="slider">
+  <div class="slide active">
+    <img src="Asadullah.jpeg" width="100%" alt="Slide 1">
+  </div>
+  <div class="slide">
+    <img src="roza.jpg" alt="Slide 2">
+  </div>
+  <div class="slide">
+    <img src="muhammad.png" alt="Slide 3">
+  </div>
+
+  <div class="slider-buttons">
+    <button onclick="prevSlide()">&#10094;</button>
+    <button onclick="nextSlide()">&#10095;</button>
+  </div>
+</div>
+
+    <main>
+        <h1 style="text-align: center;">Select News Section</h1>
+        <ul style="list-style-type:disc ;">
+      <li>  <a href="today.html" class="btn" target="_blank">Today News</a> </li>
+
+
+      <li>  <a href="sindh.html" class="btn" target="_blank">Sindh News</a> </li>
+
+
+      <li> <a href="jobs.html" class="btn" target="_blank">Govt Jobs</a> </li>
+
+      
+        </ul>
+    </main>
+
+    <footer>
+        <p>© 2025 My News Website. All rights reserved.</p>
+    </footer>
+    <script>
+     let currentSlide = 0;
+const slides = document.querySelectorAll(".slide");
+
+function showSlide(index) {
+  slides.forEach(slide => slide.classList.remove("active"));
+  slides[index].classList.add("active");
+}
+
+function nextSlide() {
+  currentSlide = (currentSlide + 1) % slides.length;
+  showSlide(currentSlide);
+}
+
+function prevSlide() {
+  currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+  showSlide(currentSlide);
+}
+
+setInterval(nextSlide, 3000); // 3 sec me slide change
+
+    </script>
+</body>
+</html>
