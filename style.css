@@ -33,7 +33,7 @@ header h1 {
 
 nav {
   display: flex;
-  
+  justify-content: center;
   align-items: center;       /* vertically center karne ke liye */
   /* agar horizontal spacing chahiye to gap add kar sakte hain */
   gap: 3px;
@@ -63,6 +63,7 @@ main {
     padding: 20px;
     border-radius: 5px;
     color: black;
+    margin-top:10px;
 }
 
 article {
@@ -168,6 +169,7 @@ overflow: hidden;
 .slider-buttons button:last-child {
   right: -1px;  /* right se thoda gap */
 }
+
 
 
 
